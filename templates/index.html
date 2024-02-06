@@ -37,7 +37,7 @@
   ======================================================== -->
 </head>
 
-<body>
+<body >
 
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -71,12 +71,13 @@
 
   <!-- ======= Hero Section ======= -->
   
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="background:url(/static/assets/img/bg-hero.jpg) top center ;">
-    <div class="hero-container" data-aos="fade-in">
+  <section  id="hero" class="d-flex flex-column justify-content-center align-items-center s" style="background:url(/static/assets/img/bg-hero.jpg) top center ;">
+    <div class="hero-container" data-aos="fade-in" >
       <h1>Ali Elmi</h1>
-      <p>I'm <span class="typed" data-typed-items="Web Developer, Full-stack developer,  Freelancer, "></span></p>
+      <p>I'm <span  class="typed" data-typed-items="Web Developer, Full-stack developer,  Freelancer, "></span></p>
     </div>
-  </section><!-- End Hero -->
+  </section>
+<!-- End Hero -->
 
   <main id="main">
 
@@ -301,7 +302,7 @@
               <img src="{% static 'assets/img/portfolio/project.jpg' %}" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="{% static 'assets/img/portfolio/project.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Django 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="https://github.com/alielmi98/djangi.info.resume.git" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
@@ -430,6 +431,23 @@
   <!-- Template Main JS File -->
   <script src="{% static 'assets/js/main.js' %}"></script>
 
+  <script>
+    const section=document.getElementById("hero")
+    if(window.innerWidth >1200){
+       section.setAttribute("style","background:url(/static/assets/img/bg-hero.jpg) top center ;");
+      }
+      else{
+       section.setAttribute("style","background:url(/static/assets/img/bg-hero-mobile.jpg) top center ;");
+      }
+    onresize = (event) => {
+      if(window.innerWidth >1200){
+       section.setAttribute("style","background:url(/static/assets/img/bg-hero.jpg) top center ;");
+      }
+      else{
+       section.setAttribute("style","background:url(/static/assets/img/bg-hero-mobile.jpg) top center ;");
+      }
+    };
+  </script>
 </body>
 
 </html>
